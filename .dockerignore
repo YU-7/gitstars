@@ -6,3 +6,4 @@ Dockerfile
 dist
 .github
 .gitignore
+.env

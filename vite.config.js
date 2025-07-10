@@ -29,8 +29,8 @@ const toConfig = () => {
       //   key: './cert/localhost.key',
       //   cert: './cert/localhost.crt',
       // },
-      host: true,
-      port: '30000',
+      host: envLocal.VITE_GITSTARS_SITE,
+      port: envLocal.VITE_GITSTARS_PORT,
       proxy: {
         '/api': {
           target: envLocal.VITE_API_PROXY,

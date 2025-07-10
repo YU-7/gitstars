@@ -8,8 +8,7 @@ RUN npm install -g pnpm && pnpm install
 # 复制项目源码并构建
 COPY . .
 COPY start.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/start.sh
-EXPOSE 30000
+RUN chmod +x /usr/local/bin/start.sh && touch /var/log/gitstars.log /var/log/express.log
 
 ENTRYPOINT [ "start.sh" ]
 
