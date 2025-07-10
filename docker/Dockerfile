@@ -9,7 +9,7 @@ RUN npm install -g pnpm && pnpm install
 
 # 复制项目源码并构建
 COPY . .
-COPY docker/start.sh /usr/local/bin/
+COPY ./docker/start.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/start.sh && touch /var/log/gitstars.log /var/log/express.log
 
 ENTRYPOINT [ "start.sh" ]
